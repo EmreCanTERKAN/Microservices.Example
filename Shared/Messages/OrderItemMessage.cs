@@ -10,6 +10,6 @@ namespace Shared.Messages
     public class OrderItemMessage
     {
         public Guid ProductId { get; set; }
-        public long Count { get; set; }
+        public int Count { get; set; }
     }
 }

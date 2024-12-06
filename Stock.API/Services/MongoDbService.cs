@@ -9,10 +9,10 @@ namespace Stock.API.Services
         public MongoDbService(IConfiguration configuration)
         {
             MongoClient client = new(configuration.GetConnectionString("MongoDb"));
-            _dataBase = client.GetDatabase("StockAPIDB");
+            _dataBase = client.GetDatabase("StockAPIDB");     
         }
-
-
-
+        //databaseden okumak istediğimiz tabloyu getirecek fonksiyon yazmamız gerek.
+        //Dinamik bir şekilded koleksiyon çağırılır...
+        public IMongoCollection<T> GetCollection<T>() => _dataBase.GetCollection<T>(typeof(T).Name.ToLowerInvariant());
     }
 }
