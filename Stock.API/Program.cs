@@ -43,11 +43,9 @@ var cursor = collection.FindSync<Stock.API.Models.Entities.Stock>(session => tru
 // Bundan sonra kontrolde bulunmamýz gerekiyor.. Bu koleksiyonda herhangi bir veri var mý yoksa þunu þunu yap.. 
 if (!collection.FindSync<Stock.API.Models.Entities.Stock>(session => true).Any())
 {
-    await collection.InsertOneAsync(new() { ProductId = Guid.NewGuid(), Count = 2000 });
-    await collection.InsertOneAsync(new() { ProductId = Guid.NewGuid(), Count = 1000 });
-    await collection.InsertOneAsync(new() { ProductId = Guid.NewGuid(), Count = 3000 });
-    await collection.InsertOneAsync(new() { ProductId = Guid.NewGuid(), Count = 5000 });
-    await collection.InsertOneAsync(new() { ProductId = Guid.NewGuid(), Count = 500 });
+    await collection.InsertOneAsync(new() { ProductId = "1d6135c3-dabe-4c94-b67d-ff5bc7a28ea2", Count = 2000 });
+    await collection.InsertOneAsync(new() { ProductId = "1c860e50-34eb-4909-9e31-519165c3c079", Count = 1000 });
+    await collection.InsertOneAsync(new() { ProductId = "7346ed83-e772-45b9-b9a6-a90cf99445fc", Count = 3000 });
 }
 
 #endregion

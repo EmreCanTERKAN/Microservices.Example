@@ -9,7 +9,7 @@ namespace Shared.Messages
     // Mesajlarda genellikle ekstra bilgiler tutarız.
     public class OrderItemMessage
     {
-        public Guid ProductId { get; set; }
+        public string ProductId { get; set; }
         public int Count { get; set; }
     }
 }

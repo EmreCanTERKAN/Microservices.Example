@@ -2,8 +2,8 @@
 {
     public class CreateOrderItemViewModel
     {
-        public Guid ProductId { get; set; }
-        public long Count { get; set; }
+        public string ProductId { get; set; }
+        public int Count { get; set; }
         public decimal Price { get; set; }
     }
 }
